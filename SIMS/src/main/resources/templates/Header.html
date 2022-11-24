@@ -1,22 +1,6 @@
-<<<<<<< Updated upstream
-<header class="menu">
-  <h1><a href="/">SIMS</a></h1>
-  <nav class="clearfix">
-    <u1 class="clearfix">
-      <li><a href="account">가계부</a></li>
-      <li><a href="insert">내역입력</a></li>
-      <li><a href="stock">재고관리</a></li>
-      |
-      <li><a href="/">Login</a></li>
-      <li><a href="signUp">SignUp</a></li>
-    </u1>
-    <a id="pull" href="#"></a>
-  </nav>
-</header>
-=======
 <html xmlns:th="http://www.thymeleaf.org">
   <header class="menu">
-    <h1><a href="/">SIMS</a></h1>
+    <h1><a href="/account">SIMS</a></h1>
     <nav class="clearfix">
       <u1 class="clearfix">
         <li><a href="account">가계부</a></li>
@@ -24,7 +8,7 @@
         <li><a href="stock">재고관리</a></li>
         <li>
           <form th:action="@{/logout}" method="post">
-            <button type="submit"> 로그아웃 </button>
+            <button type="submit"> Logout </button>
           </form>
         </li>
       </u1>
@@ -32,4 +16,3 @@
     </nav>
   </header>
 </html>
->>>>>>> Stashed changes
