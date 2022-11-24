@@ -6,6 +6,11 @@
 
 # ✅ 프로그래밍 요구사항
 
+## 공통 요구 사항
+
+- jdk 11버전
+- mysql
+
 ## 📊 데이터 분석
 
 데이터 분석을 위한 파이썬 프로그래밍은 `src/main/python` 폴더 내부에서 작업
@@ -14,15 +19,15 @@
 
 ## 🎨 프론트엔드
 
-프론트엔드 작업은 `src/main/webapp/WEB-INF/view` 폴더 내부에서 작업
+html 작업은 `resources/templates`내에서 작업
 
-템플릿 엔진: `jsp`
+css, js는 `resources/static`에서 작업
+
+템플릿 엔진: `thymeleaf`
 
 ## 💾 백엔드
 
 백엔드 작업은 `src/main/java` 폴더 내부에서 작업
 
 - 사용할 프레임워크
-    - JDK 11버전
-    - mysql
     - spring boot

@@ -1,0 +1,45 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SIMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div th:replace="/header :: header" th:remove="tag"></div>
+
+    <main>
+        <div class = "main-background">
+            <div class = "title" align="left">회원가입
+                <form action="/signUp/new" method="post">
+                    <div class="name-box">
+                        <div align="center">
+                            <div class = "name-title">이름</div>
+                            <input id="name" name="name" type="text">
+                            <div class="PhoneNumber-title">연락처</div>
+                            <input id="PhoneNumber" name="phoneNumber" type="text">
+                        </div>
+
+                        <div align="center">
+                            <div class="ID-title">ID</div>
+                            <input id="ID" name="id" type="text">
+
+                            <div class="PW-title">PW</div>
+                            <input id="Password" name="password" type="text">
+
+                            <div class="passwordcheck-title">PW확인</div>
+                            <input id="passwordcheck" name="passwordCheck" type="text">
+
+                        </div>
+
+                        <div class="signup-button" align="center">
+                            <button type="submit" class="signup-text">회원가입</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+     </div>
+    </main>
+</body>
+</html>
