@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SIMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="menu">
+    <h1><a href="MainPage.html">SIMS</a></h1>
+    <nav class="clearfix">
+      <u1 class="clearfix">
+        <li><a href="AccountPage.html">가계부</a></li>
+        <li><a href="InsertPage.html">내역입력</a></li>
+        <li><a href="StockPage.html">재고관리</a></li>
+        |
+        <li><a href="MainPage.html">Login</a></li>
+        <li><a href="SignUpPage.html">SignUp</a></li>
+      </u1>
+      <a id="pull" href="#"></a>
+    </nav>
+  </header>
+  
+  <main>
+    <div class = "side_contents">
+      <div class = "side_up">재고, 직접 계산하기 힘드시죠? <br> SIMS가 대신 계산해드립니다!</div>
+      <div class = "side_img1"><img src = "images/shopping.png" width = 170px></div>
+      <div class = "side_ex1"><p id = "ex1_1">가계부</p> <p id = "ex1_2">- 실제로 재고가 얼마나 있는가<br>- 저장된 데이터베이스를 통해 확인</p></div>
+      <div class = "side_ex2"><p id = "ex2_1">내역입력</p> <p id = "ex2_2">- 실제 재고를 직접 입력할 수 있도록<br>- 수입, 지출 관련 내역 입력 가능</p></div>
+      <div class = "side_img2"><img src = "images/order-delivery.png" width = 170px></div>
+      <div class = "side_img3"><img src = "images/box.png" width = 170px></div>
+      <div class = "side_ex3"><p id = "ex3_1">재고 관리</p> <p id = "ex3_2">- 재고가 얼마나 남았는지<br>- 어떤 재고를 추가로 구매하면 좋을지</p></div>
+    </div>
+
+    <div class = "side_login" align="center">
+      <div class = "login_name">LOGIN</div>
+      <div class = "login_idname">ID</div>
+      <input type="text" class="account" padding = "10px">
+      <div class = "login_pwname">PW</div>
+      <input type="password" class="account" padding = "10px">
+      <div class = "login"><a href="">로그인</a></div>
+      <div class = "signup">본 사이트가 처음이시라면</div>
+      <button id="signup_btn" class="account"><a href="SignUpPage.html">회원가입</a></button>
+    </div>
+  </main>   
+</body>
+</html>

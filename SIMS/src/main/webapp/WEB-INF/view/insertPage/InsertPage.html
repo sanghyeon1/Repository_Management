@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SIMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="menu">
+    <h1><a href="MainPage.html">SIMS</a></h1>
+    <nav class="clearfix">
+      <u1 class="clearfix">
+        <li><a href="AccountPage.html">가계부</a></li>
+        <li><a href="InsertPage.html">내역입력</a></li>
+        <li><a href="StockPage.html">재고관리</a></li>
+        |
+        <li><a href="MainPage.html">Login</a></li>
+        <li><a href="SignUpPage.html">SignUp</a></li>
+      </u1>
+      <a id="pull" href="#"></a>
+    </nav>
+  </header>
+
+  <main>
+    <div class = "side_input">
+      <div class = "side_name">내역입력</div>
+      <div class = "side_prdt">물품을 선택해주세요</div>
+      <select id="product">
+        <option></option>
+      </select>
+      <div class = "side_amnt">수량을 입력해주세요</div>
+      <input type="text" id="amount">
+      <div class = "side_cost">단가를 입력해주세요</div>
+      <input type="text" id="cost">
+      <div class = "side_date">판매 날짜를 입력해주세요</div>
+      <input type="date" id="date">
+      <br>
+      <div class = "side_chos">
+        <label>
+          <input type="radio" name="choose" value="income" checked>
+          <span>수입</span>
+        </label>
+        <label>
+          <input type="radio" name="choose" value="spend">
+          <span>지출</span>
+        </label>
+      </div>
+      <br>
+      <button id="post_btn"><a href="AccountPage.html">제출</a></button>
+      <button id="clear_btn">초기화</button>
+    </div>
+  </main>
+</body>
+</html>
