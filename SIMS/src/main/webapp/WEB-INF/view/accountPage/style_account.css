@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* AccountPage */
+.left-box {
+  width: 30%;
+  height: 500px;
+  background-color:white;
+  margin-left: 150px;
+  border-radius: 2em;
+  border-style: solid;
+  border-width: 20px 20px 20px 20px;
+  border-color: #FFFFDD;
+}
+
+.right-box {
+  width: 30%;
+  height: 500px;
+  background-color:white;
+  margin-top: 35px;
+  border-radius: 2em;
+  border-width: 20px 20px 20px 20px;
+  border-style: solid;
+  border-color: #FFFFDD;
+  float: right;
+  position: relative;
+  bottom:530px;
+  right:150px
+}
+
+.gain-head {
+  width:160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  position: relative;
+  top: 70px;
+  left: 270px;
+  font-size: 18pt;
+  color: #68CDB4;
+  text-align: center;
+}
+
+.gain-list {
+  font-size: 18pt;
+  color:#68CDB4;
+  text-align: center;
+}
+
+.gain-button {
+  width:160px;
+  height: 60px;
+  background-color:#FFFFDD;
+  border-radius: 0.5em ;
+  border: none;
+  color: #68CDB4;
+  font-size: 18pt;
+  position:relative;
+  left:270px;
+  top:50px;
+}
+
+.pay-head {
+  width:160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  position: relative;
+  left: 928px;
+  bottom: -15px;
+  font-size: 18pt;
+  color: #68CDB4;
+  text-align: center;
+}
+
+.pay-list {
+  font-size: 18pt;
+  color:#68CDB4;
+  text-align: center;
+}
+
+.pay-button {
+  width:160px;
+  height: 60px;
+  background-color:#FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  color:#68CDB4 ;
+  font-size: 18pt;
+  position:relative;
+  left:940px;
+  bottom:10px;
+}
+
+.gain-edit-button {
+  width:80px;
+  height: 40px;
+  background-color:#FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  vertical-align: bottom;
+  color: #68CDB4;
+  font-size: 10pt;
+  position: relative;
+  margin-top: 20px;
+  
+}
+
+.pay-edit-button {
+  width:80px;
+  height: 40px;
+  background-color:#FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  vertical-align: bottom;
+  color: #68CDB4;
+  font-size: 10pt;
+  position: relative;
+  margin-top: 30px;
+}

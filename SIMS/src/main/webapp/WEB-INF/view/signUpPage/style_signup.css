@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* SignUpPage */
+.main-background {
+  width: 50%;
+  height: 720px;
+  background-color: #FFFFDD;
+  border-radius: 40px 40px 40px 40px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 25pt;
+  color:#68CDB4;
+  font-family: '나눔스퀘어';
+  padding: 40px;
+}
+
+.name-title {
+  font-size: 18pt;
+  color:#68CDB4;
+  padding: 12px;
+}
+
+.PhoneNumber-title{
+  font-size: 18pt;
+  color:#68CDB4;
+  padding: 12px;
+}
+
+.ID-title {
+  font-size: 18pt;
+  color:#68CDB4;
+  padding: 12px;
+}
+
+.PW-title {
+  font-size: 18pt;
+  color:#68CDB4;
+  padding: 12px;
+}
+
+.passwordcheck-title {
+  font-size: 18pt;
+  color:#68CDB4;
+  padding: 12px;
+}
+
+.signup-text {
+  font-size: 15pt;
+  color:#FFFFDD;
+}
+
+.name-box input{
+  width: 50%;
+  height: 50px;
+  background-color:#68CDB4;
+  border-radius: 30px;
+  border-style: none;
+  text-align: center;
+}
+
+.signup-button button {
+  width: 50%;
+  height: 50px;
+  background-color:#68CDB4;
+  border-radius: 30px;
+  border-style: none;
+  margin-top: 35px;
+}
+
+.signup-button button a {
+  text-decoration: none;
+  color: #FFFFDD;
+}
