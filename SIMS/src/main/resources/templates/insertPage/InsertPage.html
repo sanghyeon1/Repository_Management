@@ -3,11 +3,11 @@
   <meta charset="UTF-8">
   <title>SIMS</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="insertPage/style_insert.css">
 </head>
 
 <body>
 <div th:replace="/header :: header" th:remove="tag"></div>
-
   <main>
     <div class = "side_input">
       <div class = "side_name">내역입력</div>
@@ -33,7 +33,7 @@
         </label>
       </div>
       <br>
-      <button id="post_btn"><a href="AccountPage.html">제출</a></button>
+      <button id="post_btn"><a href="../accountPage/AccountPage.html">제출</a></button>
       <button id="clear_btn">초기화</button>
     </div>
   </main>

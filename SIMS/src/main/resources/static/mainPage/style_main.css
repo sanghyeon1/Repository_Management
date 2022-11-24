@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+/* MainPage */
+.side_contents {
+  margin-top: 110px;
+  margin-left: 100px;
+}
+
+.side_up {
+  font-family: '나눔스퀘어';
+  font-size: 35pt;
+  color: #FFFFDD;
+  margin-top: 75px;
+  margin-left: 75px;
+}
+
+.side_img1 {
+  margin-top: 50px;
+  margin-left: 65px;
+}
+
+.side_ex1 {
+  font-family: '나눔스퀘어';
+  color: #FFFFDD;
+}
+
+p#ex1_1 {
+  font-size: 28pt;
+  margin-top: -140px;
+  margin-left: 270px;
+}
+
+p#ex1_2 {
+  font-size: 20pt;
+  margin-top: -20px;
+  margin-left: 270px;
+}
+
+.side_ex2 {
+  font-family: '나눔스퀘어';
+  color: #FFFFDD;
+}
+
+p#ex2_1 {
+  font-size: 28pt;
+  margin-top: 80px;
+  margin-left: 105px;
+}
+
+p#ex2_2 {
+  font-size: 20pt;
+  margin-top: -20px;
+  margin-left: 105px;
+}
+
+.side_img2 {
+  margin-top: -180px;
+  margin-left: 550px;
+}
+
+.side_img3 {
+  margin-top: 50px;
+  margin-left: 75px;
+}
+
+.side_ex3 {
+  font-family: '나눔스퀘어';
+  color: #FFFFDD;
+}
+
+p#ex3_1 {
+  font-size: 28pt;
+  margin-top: -145px;
+  margin-left: 290px;
+}
+
+p#ex3_2 {
+  font-size: 20pt;
+  margin-top: -20px;
+  margin-left: 290px;
+}
+
+.side_login {
+  width: 500px;
+  height: 600px;
+  background-color: #FFFFDD;
+  margin-left: 980px;
+  margin-top: -690px;
+  border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;
+}
+
+.login_name {
+  font-size: 35pt;
+  font-family: '나눔스퀘어';
+  color: #68CDB4;
+  padding: 30px;
+  text-align: center;
+}
+
+.login_idname {
+  font-size: 25pt;
+  font-family: '나눔스퀘어';
+  color: #68CDB4;
+  padding: 15px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.login_pwname {
+  font-size: 25pt;
+  font-family: '나눔스퀘어';
+  color: #68CDB4;
+  padding: 15px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.login {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.login a {
+  font-size: 25pt;
+  font-family: '나눔스퀘어';
+  color: #68CDB4;
+  text-decoration: none;
+}
+
+.signup {
+  font-size: 20pt;
+  font-family: '나눔스퀘어';
+  color: #68CDB4;
+  text-align: center;
+  padding: 15px;
+}
+
+.account {
+  display: block;
+  border: 1px solid #68CDB4;
+  background-color: #68CDB4;
+  border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;
+  border-width: 13px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 12pt;
+}
+
+#signup_btn {
+  color: #FFFFDD;
+}
+
+#signup_btn a {
+  text-decoration: none;
+  color: #FFFFDD;
+}

@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* InsertPage */
+.side_input {
+  margin-top: 75px;
+  margin-left: 75px;
+}
+
+.side_name {
+  font-family: '나눔스퀘어';
+  font-size: 35pt;
+  color: #FFFFDD;
+  margin-bottom: 40px;
+}
+
+.side_prdt {
+  font-family: '나눔스퀘어';
+  font-size: 25pt;
+  color: #FFFFDD;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.side_amnt {
+  font-family: '나눔스퀘어';
+  font-size: 25pt;
+  color: #FFFFDD;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.side_cost {
+  font-family: '나눔스퀘어';
+  font-size: 25pt;
+  color: #FFFFDD;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.side_date {
+  font-family: '나눔스퀘어';
+  font-size: 25pt;
+  color: #FFFFDD;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.side_input input {
+  font-family: '나눔스퀘어';
+  width: 400px;
+  height: 50px;
+  background-color:#FFFFDD;
+  border-radius: 30px;
+  border-style: none;
+  text-align: center;
+  color: #68CDB4;
+  margin-bottom: 20px;
+}
+
+#product {
+  font-family: '나눔스퀘어';
+  width: 400px;
+  height: 50px;
+  background-color:#FFFFDD;
+  border-radius: 30px;
+  border-style: none;
+  text-align: center;
+  color: #68CDB4;
+  margin-bottom: 20px;
+}
+
+.side_chos label {
+  font-size: 17pt;
+  color: #FFFFDD;
+  line-height: 2rem;
+  padding: 0.2em 0.4em;
+}
+
+.side_chos span {
+  vertical-align: middle;
+}
+
+.side_chos input[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  transition: border 0.5s ease-in-out;
+}
+
+.side_chos input[type="radio"]:checked {
+  border: 0.4em solid tomato;
+}
+
+.side_chos input[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+
+.side_chos input[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) #FFFFDD;
+  cursor: pointer;
+}
+
+.side_input button {
+  font-family: '나눔스퀘어';
+  font-size: 13pt;
+  width: 80px;
+  height: 50px;
+  margin-left: 40px;
+  background-color: #FFFFDD;
+  border-radius: 30px;
+  border-style: none;
+  color: #68CDB4;
+}
+
+button#post_btn {
+  margin-left: 0;
+  width: 150px;
+}
+
+button#post_btn a {
+  text-decoration: none;
+  color: #68CDB4;
+}
+
+button#clear_btn {
+  margin-left: 10px;
+  width: 150px;
+}
