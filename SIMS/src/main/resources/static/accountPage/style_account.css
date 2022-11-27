@@ -1,30 +1,30 @@
 @charset "UTF-8";
 
 /* AccountPage */
-.left-box {
-  width: 30%;
-  height: 500px;
-  background-color:white;
-  margin-left: 150px;
-  border-radius: 2em;
-  border-style: solid;
-  border-width: 20px 20px 20px 20px;
-  border-color: #FFFFDD;
+.side_content {
+  font-family: '나눔스퀘어';
+  font-size: 35pt;
+  color: #FFFFDD;
+  margin-top: 75px;
+  margin-left: 75px;
 }
 
-.right-box {
-  width: 30%;
-  height: 500px;
-  background-color:white;
-  margin-top: 35px;
+.left {
+  font-family: '나눔스퀘어';
+  margin-top: 60px;
+  margin-left: 130px;
+}
+
+.left-box {
+  width: 580px;
+  height: 600px;
+  background-color: white;
   border-radius: 2em;
-  border-width: 20px 20px 20px 20px;
   border-style: solid;
+  border-width: 13px;
   border-color: #FFFFDD;
-  float: right;
-  position: relative;
-  bottom:530px;
-  right:150px
+  padding: 30px;
+  text-align: center;
 }
 
 .gain-head {
@@ -33,17 +33,17 @@
   background-color: #FFFFDD;
   border-radius: 0.5em;
   position: relative;
-  top: 70px;
-  left: 270px;
   font-size: 18pt;
-  color: #68CDB4;
+  color: #349E85;
+  padding: 15px;
   text-align: center;
+  margin-left: 210px;
+  margin-bottom: -8px;
 }
 
 .gain-list {
   font-size: 18pt;
-  color:#68CDB4;
-  text-align: center;
+  color:#349E85;
 }
 
 .gain-button {
@@ -52,11 +52,35 @@
   background-color:#FFFFDD;
   border-radius: 0.5em ;
   border: none;
-  color: #68CDB4;
+  color: #349E85;
   font-size: 18pt;
-  position:relative;
-  left:270px;
-  top:50px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 210px;
+}
+
+.gain-button a {
+  text-decoration: none;
+  color: #349E85;
+}
+
+.right {
+  font-family: '나눔스퀘어';
+  margin-top: -721px;
+  margin-left: 950px;
+}
+
+.right-box {
+  width: 580px;
+  height: 600px;
+  background-color:white;
+  border-radius: 2em;
+  border-width: 13px;
+  border-style: solid;
+  border-color: #FFFFDD;
+  position: relative;
+  padding: 30px;
+  text-align: center;
 }
 
 .pay-head {
@@ -65,17 +89,17 @@
   background-color: #FFFFDD;
   border-radius: 0.5em;
   position: relative;
-  left: 928px;
-  bottom: -15px;
   font-size: 18pt;
-  color: #68CDB4;
+  color: #349E85;
+  padding: 15px;
   text-align: center;
+  margin-left: 210px;
+  margin-bottom: -8px;
 }
 
 .pay-list {
   font-size: 18pt;
-  color:#68CDB4;
-  text-align: center;
+  color:#349E85;
 }
 
 .pay-button {
@@ -84,36 +108,14 @@
   background-color:#FFFFDD;
   border-radius: 0.5em;
   border: none;
-  color:#68CDB4 ;
+  color:#349E85;
   font-size: 18pt;
   position:relative;
-  left:940px;
-  bottom:10px;
+  margin-top: 15px;
+  margin-left: 210px;
 }
 
-.gain-edit-button {
-  width:80px;
-  height: 40px;
-  background-color:#FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  vertical-align: bottom;
-  color: #68CDB4;
-  font-size: 10pt;
-  position: relative;
-  margin-top: 20px;
-  
-}
-
-.pay-edit-button {
-  width:80px;
-  height: 40px;
-  background-color:#FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  vertical-align: bottom;
-  color: #68CDB4;
-  font-size: 10pt;
-  position: relative;
-  margin-top: 30px;
+.pay-button a {
+  text-decoration: none;
+  color: #349E85;
 }

@@ -12,43 +12,44 @@
 
 .title {
   font-size: 25pt;
-  color:#68CDB4;
+  color:#349E85;
   font-family: '나눔스퀘어';
   padding: 40px;
 }
 
 .name-title {
   font-size: 18pt;
-  color:#68CDB4;
+  color:#349E85;
   padding: 12px;
 }
 
 .PhoneNumber-title{
   font-size: 18pt;
-  color:#68CDB4;
+  color:#349E85;
   padding: 12px;
 }
 
 .ID-title {
   font-size: 18pt;
-  color:#68CDB4;
+  color:#349E85;
   padding: 12px;
 }
 
 .PW-title {
   font-size: 18pt;
-  color:#68CDB4;
+  color:#349E85;
   padding: 12px;
 }
 
 .passwordcheck-title {
   font-size: 18pt;
-  color:#68CDB4;
+  color:#349E85;
   padding: 12px;
 }
 
 .signup-text {
-  font-size: 15pt;
+  font-size: 16pt;
+  font-family: '나눔스퀘어';
   color:#FFFFDD;
 }
 

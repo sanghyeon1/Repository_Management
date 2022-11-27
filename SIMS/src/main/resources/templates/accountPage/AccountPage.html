@@ -3,12 +3,29 @@
   <meta charset="UTF-8">
   <title>SIMS</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="accountPage/style_account.css">
 </head>
 
 <body>
 <div th:replace="/header :: header" th:remove="tag"></div>
   <main>
-    <div class = "side_up">가계부</div>
+    <div class = "side_content">가계부</div>
+    <div>
+      <div class="left">
+      	<div class="gain-head">수입</div>
+      	<div class="left-box">
+          	<div class="gain-list">수입 내역</div>
+        </div>
+        <button class="gain-button"><a href="insert">입력</a></button>
+      </div>
+      <div class="right">
+      	<div class="pay-head">지출</div>
+        <div class="right-box">
+          <div class="pay-list">지출 내역</div>
+        </div>
+        <button class="pay-button"><a href="insert">입력</a></button>
+      </div>
+    </div>
   </main>
 </body>
 </html>

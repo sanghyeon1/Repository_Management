@@ -53,7 +53,8 @@
   border-radius: 30px;
   border-style: none;
   text-align: center;
-  color: #68CDB4;
+  size: 15pt;
+  color: #349E85;
   margin-bottom: 20px;
 }
 
@@ -113,7 +114,7 @@
   background-color: #FFFFDD;
   border-radius: 30px;
   border-style: none;
-  color: #68CDB4;
+  color: #349E85;
 }
 
 button#post_btn {
@@ -123,7 +124,7 @@ button#post_btn {
 
 button#post_btn a {
   text-decoration: none;
-  color: #68CDB4;
+  color: #349E85;
 }
 
 button#clear_btn {

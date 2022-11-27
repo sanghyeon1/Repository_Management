@@ -92,7 +92,7 @@ p#ex3_2 {
 .login_name {
   font-size: 35pt;
   font-family: '나눔스퀘어';
-  color: #68CDB4;
+  color: #349E85;
   padding: 30px;
   text-align: center;
 }
@@ -100,7 +100,7 @@ p#ex3_2 {
 .login_idname {
   font-size: 25pt;
   font-family: '나눔스퀘어';
-  color: #68CDB4;
+  color: #349E85;
   padding: 15px;
   text-align: left;
   margin-left: 50px;
@@ -109,29 +109,16 @@ p#ex3_2 {
 .login_pwname {
   font-size: 25pt;
   font-family: '나눔스퀘어';
-  color: #68CDB4;
+  color: #349E85;
   padding: 15px;
   text-align: left;
   margin-left: 50px;
 }
 
-.login {
-  padding-top: 20px;
-  padding-bottom: 40px;
-  text-align: center;
-}
-
-.login a {
-  font-size: 25pt;
-  font-family: '나눔스퀘어';
-  color: #68CDB4;
-  text-decoration: none;
-}
-
 .signup {
   font-size: 20pt;
   font-family: '나눔스퀘어';
-  color: #68CDB4;
+  color: #349E85;
   text-align: center;
   padding: 15px;
 }
@@ -142,14 +129,35 @@ p#ex3_2 {
   background-color: #68CDB4;
   border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;
   border-width: 13px;
+  border-style: none;
   width: 400px;
   height: 50px;
   text-align: center;
   font-size: 12pt;
 }
 
+.btn {
+  display: block;
+  border: 1px solid #68CDB4;
+  background-color: #68CDB4;
+  border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;
+  border-width: 13px;
+  border-style: none;
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+#login_btn {
+  color: #FFFFDD;
+  font-size: 16pt;
+  font-family: '나눔스퀘어';
+}
+
 #signup_btn {
   color: #FFFFDD;
+  font-size: 16pt;
+  font-family: '나눔스퀘어';
 }
 
 #signup_btn a {

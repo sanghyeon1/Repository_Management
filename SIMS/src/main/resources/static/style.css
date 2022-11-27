@@ -72,7 +72,7 @@ ul {
   /*list-style-type: none;*/
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #FFFFDD;
   text-align: center;
 }
 
@@ -102,6 +102,15 @@ li a:hover {
   background-size: cover;
   background-color: #FFFFDD; color: #68CDB4;
   position: fixed; z-index: 1;
+}
+
+#logout_btn {
+	border: 0;
+	outline: 0;
+	background-color: #FFFFDD;
+	color: #68CDB4;
+	font-size: 17pt;
+	font-family: '나눔스퀘어';
 }
 
 main {
