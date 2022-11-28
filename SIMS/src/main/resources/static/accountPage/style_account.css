@@ -46,7 +46,25 @@
   color:#349E85;
 }
 
-.gain-button {
+.gain-insert {
+  width: 160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  color: #349E85;
+  font-size: 18pt;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+.gain-insert a {
+  text-decoration: none;
+  color: #349E85;
+}
+
+.gain-modify {
   width:160px;
   height: 60px;
   background-color:#FFFFDD;
@@ -56,10 +74,28 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 210px;
+  margin-left: 45px;
 }
 
-.gain-button a {
+.gain-modify a {
+  text-decoration: none;
+  color: #349E85;
+}
+
+.gain-delete {
+  width: 160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  color: #349E85;
+  font-size: 18pt;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 45px;
+}
+
+.gain-delete a {
   text-decoration: none;
   color: #349E85;
 }
@@ -102,7 +138,25 @@
   color:#349E85;
 }
 
-.pay-button {
+.pay-insert {
+  width: 160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  color: #349E85;
+  font-size: 18pt;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+.pay-insert a {
+  text-decoration: none;
+  color: #349E85;
+}
+
+.pay-modify {
   width:160px;
   height: 60px;
   background-color:#FFFFDD;
@@ -112,10 +166,28 @@
   font-size: 18pt;
   position:relative;
   margin-top: 15px;
-  margin-left: 210px;
+  margin-left: 45px;
 }
 
-.pay-button a {
+.pay-modify a {
+  text-decoration: none;
+  color: #349E85;
+}
+
+.pay-delete {
+  width: 160px;
+  height: 60px;
+  background-color: #FFFFDD;
+  border-radius: 0.5em;
+  border: none;
+  color: #349E85;
+  font-size: 18pt;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 45px;
+}
+
+.pay-delete a {
   text-decoration: none;
   color: #349E85;
 }

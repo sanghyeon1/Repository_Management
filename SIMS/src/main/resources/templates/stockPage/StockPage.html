@@ -9,20 +9,18 @@
 <body>
 <div th:replace="/header :: header" th:remove="tag"></div>
   <main>
-    <div class = "side_content">재고관리</div>
-    <div>
-      <select class="stock-box-select">
-
-      </select>
-      <button class="stock-box-button" type="button">입력</button>
-      <div class="stock-box"> </div>
+    <div class="side_content">재고관리</div>
+    <div class="left">
+    	<div class="left_name">수익 예측(단위 : 하루)</div>
+    	<div class="prdgrp_box"></div>
     </div>
-    <div>
-      <select class="preview-box-select">
-
-      </select>
-      <button class="preview-box-button" type="button">입력</button>
-      <div class="preview-box"> </div>
+    <div class="right">
+    	<select id="product">
+    		<option></option>
+    	</select>
+    	<div class="prd_left">남은 재고량 : </div>
+    	<div class="paygrp_box"></div>
+    	<div class="prd_tomorrow">내일 판매 예측량 : </div>
     </div>
   </main>
 </body>

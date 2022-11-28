@@ -9,85 +9,81 @@
   margin-left: 75px;
 }
 
-.stock-box {
-  width: 45%;
-  height: 500px;
-  background-color: white;
-  border-radius: 3em;
-  border: none;
-  border-width: 10px 10px 10px 10px;
-  border-style: solid;
-  border-color: #FFFFDD;
-  float: left;
-  margin-top: 70px;
+.left {
+  font-family: '나눔스퀘어';
+  margin-top: 25px;
+  margin-left: 75px;
 }
 
-.preview-box {
-  width: 45%;
-  height: 500px;
-  background-color: white;
-  border-radius: 3em;
-  border: none;
-  border-width: 10px 10px 10px 10px;
-  border-style: solid;
-  border-color: #FFFFDD;
-  float: right;
-  position: relative;
-  bottom: 75px;
-}
-
-.stock-box-button {
-  width:160px;
-  height: 70px;
-  background-color:#FFFFDD;
+.left_name {
+  width: 250px;
+  height: 50px;
+  background-color: #FFFFDD;
   border-radius: 0.5em;
   border: none;
-  border-color: #68CDB4;
-  color: black;
-  font-size: 20pt;
   position: relative;
-  right: 610px;
-  top: 600px;
-
+  font-size: 18pt;
+  color: #349E85;
+  text-align: center;
+  padding: 10px;
 }
 
-.preview-box-button {
-  width:160px;
-  height: 70px;
+.prdgrp_box {
+  width: 620px;
+  height: 500px;
+  background-color: white;
+  border-radius: 2em;
+  border-style: solid;
+  border-width: 13px;
+  border-color: #FFFFDD;
+  padding: 30px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.right {
+  font-family: '나눔스퀘어';
+  margin-top: -565px;
+  margin-left: 880px;
+}
+
+#product {
+  font-family: '나눔스퀘어';
+  width: 200px;
+  height: 50px;
   background-color:#FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  border-color: #68CDB4;
+  border-radius: 30px;
+  border-style: none;
+  text-align: center;
   color: #68CDB4;
-  font-size: 20pt;
-  position: relative;
-  left: 110px;
-  top:530px;
-  bottom: 20px;
 }
 
-.stock-box-select {
-  width:230px;
-  height:70px;
-  background-color:#FFFFDD;
-  color:black;
-  border: none;
-  border-radius: 0.5em;
+.prd_left {
+  font-family: '나눔스퀘어';
   font-size: 20pt;
-  position: relative;
-  right: 560px;
-  top: 10px;
+  color: #FFFFDD;
+  margin-top: -42px;
+  margin-left: 230px;
+  margin-bottom: 30px;
 }
 
-.preview-box-select {
-  width:230px;
-  height:70px;
-  background-color:#FFFFDD;
-  color:#68CDB4;
-  border: none;
-  border-radius: 0.5em;
+.paygrp_box {
+  width: 620px;
+  height: 500px;
+  background-color: white;
+  border-radius: 2em;
+  border-style: solid;
+  border-width: 13px;
+  border-color: #FFFFDD;
+  padding: 30px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.prd_tomorrow {
+  font-family: '나눔스퀘어';
   font-size: 20pt;
-  position: relative;
-  left: 150px;
-  bottom: 60px;
+  color: #FFFFDD;
+  margin-top: 20px;
+  margin-left: 25px;
 }
