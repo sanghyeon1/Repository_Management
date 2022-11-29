@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sims.SIMS.domain.Member;
 import com.sims.SIMS.repository.MemberRepository;
 
-@Service
+@Transactional
 public class MemberService {
 	private final MemberRepository memberRepository;
 
@@ -19,11 +20,11 @@ public class MemberService {
 	public String join(Member member) {
 		validateDuplicateMember(member);
 		memberRepository.save(member);
-		return member.getId();
+		return member.getUserId();
 	}
 
 	private void validateDuplicateMember(Member member) {
-		Optional<Member> result = memberRepository.findById(member.getId());
+		Optional<Member> result = memberRepository.findById(member.getUserId());
 		result.ifPresent(m-> {
 			throw new IllegalStateException("이미 존재하는 회원입니다.");
 		});

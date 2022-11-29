@@ -20,6 +20,11 @@ public class SignUpController {
 
 	@GetMapping("/signUp")
 	public String accountPage() {
+		// 파이썬 프로그램 실행해서 가계부 내용 넣기
+
+
+
+
 		return "signUpPage/SignUpPage";
 	}
 
@@ -30,7 +35,7 @@ public class SignUpController {
 		}
 		Member member = new Member();
 		member.setName(form.getName());
-		member.setId(form.getId());
+		member.setUserId(form.getUserId());
 		member.setPassword(form.getPassword());
 		member.setTel(form.getPhoneNumber());
 		System.out.println(memberService.join(member));

@@ -1,7 +1,17 @@
 package com.sims.SIMS.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
 public class Member {
-	private String id;
+	@Id
+	@Column(name = "user_id")
+	private String user_id;
 	private String name;
 	private String password;
 	private String tel;
@@ -22,12 +32,12 @@ public class Member {
 		this.tel = tel;
 	}
 
-	public String getId() {
-		return id;
+	public String getUserId() {
+		return user_id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String userId) {
+		this.user_id = userId;
 	}
 
 	public String getName() {

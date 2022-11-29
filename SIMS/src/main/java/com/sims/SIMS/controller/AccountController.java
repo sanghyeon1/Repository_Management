@@ -15,6 +15,18 @@ public class AccountController {
 		if (session == null) {
 			return "/mainPage/MainPage";
 		}
+		// 쿼리문으로 가계부 데이터를 받아오기
+
+		return "accountPage/AccountPage";
+	}
+
+	@GetMapping("/account/add")
+	public String accountAddPage(HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+		if (session == null) {
+			return "/mainPage/MainPage";
+		}
+
 		return "accountPage/AccountPage";
 	}
 }
