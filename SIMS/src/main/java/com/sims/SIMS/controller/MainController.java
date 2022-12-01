@@ -44,6 +44,7 @@ public class MainController {
 
 		HttpSession session = request.getSession();
 		session.setAttribute(SessionConst.LOGIN_MEMBER, member);
+		session.setAttribute("tel", member.get().getTel());
 		return "redirect:/account";
 	}
 

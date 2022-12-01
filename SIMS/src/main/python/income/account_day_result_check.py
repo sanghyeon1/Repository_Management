@@ -17,7 +17,7 @@ import csv
 import pymysql
 from keras.models import load_model
 
-def account():
+def account(conn, tel):
     model = load_model('income/predictor_income_weight.h5')
     model.summary()
     # 평균 제곱 오차, LSTM에서 주로 사용된다.
@@ -28,9 +28,9 @@ def account():
     # read_File
     price = list()
 
-    conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
     cur = conn.cursor()
-    cur.execute("SELECT income FROM account ORDER BY id")
+    cur.execute("SELECT income FROM account WHERE tel='" + tel + "' ORDER BY id")
+    print("SELECT income FROM account WHERE tel='" + tel + "' ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         price.append(row[0])
@@ -92,12 +92,12 @@ def account():
 
     print("Predicted Day income :", result)
 
-    cur.execute("SELECT * FROM accountPredict WHERE tel='010-6324-4435'")
+    cur.execute("SELECT * FROM accountPredict WHERE tel='" + tel + "';")
     row = cur.fetchone()
     if (row == None):
-        cur.execute("INSERT INTO accountPredict VALUES(NULL, '" + str(result) + "', '010-6324-4435');")
+        cur.execute("INSERT INTO accountPredict VALUES(NULL, '" + str(result) + "', '" + tel + "');")
     else:
-        cur.execute("UPDATE accountPredict SET predict=" + str(result) + ";")
+        cur.execute("UPDATE accountPredict SET predict=" + str(result) + " WHERE tel='" + tel + "';")
     conn.commit()
     # # 파일 Data 추가
     # with open('account_day_total_predicted.csv', 'w', encoding='cp949', newline='') as file:

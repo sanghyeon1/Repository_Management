@@ -1,11 +1,11 @@
 import pymysql
 import pandas as pd
 
-def logInsert():
+def logInsert(conn):
 	df = pd.read_csv('../account_log_all.csv')
 	item_list = df[['tel', 'productCode', 'amount', 'date', 'primeCost', 'cost', 'stockAmount']]
 
-	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+	# conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
 	cur = conn.cursor()
 	row_count, column_count = df.shape
 
@@ -25,4 +25,4 @@ def logInsert():
 
 	conn.commit()
 	print("log insert 성공")
-	conn.close()
+	# conn.close()

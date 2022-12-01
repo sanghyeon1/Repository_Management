@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 
-def memberInsert():
+def memberInsert(conn):
     df = pd.read_csv('inserts/member.csv')
     item_list = df[['user_id', 'name', 'password', 'tel']]
 
@@ -19,4 +19,4 @@ def memberInsert():
 
     conn.commit()
     print("member insert 성공")
-    conn.close()
+    # conn.close()

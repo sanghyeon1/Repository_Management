@@ -37,7 +37,7 @@ public class AccountController {
 			return "/mainPage/MainPage";
 		}
 		// 쿼리문으로 가계부 데이터를 받아오기
-		socketAccess("account");
+		socketAccess("account," + session.getAttribute("tel"));
 		return "accountPage/AccountPage";
 	}
 

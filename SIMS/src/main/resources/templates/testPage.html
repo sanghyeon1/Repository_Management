@@ -6,6 +6,7 @@
 
 <body>
     <div th:replace="Header :: header" th:remove="tag"></div>
+
     <table border="1">
         <tr th:each="log : ${logs}">
             <td th:text="${log.productCode}"/>
