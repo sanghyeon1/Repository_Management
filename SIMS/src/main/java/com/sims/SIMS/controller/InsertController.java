@@ -1,5 +1,7 @@
 package com.sims.SIMS.controller;
 
+import static com.sims.SIMS.controller.SocketPython.*;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -16,6 +18,7 @@ public class InsertController {
 		if (session == null) {
 			return "/mainPage/MainPage";
 		}
+		socketAccess("product," + session.getAttribute("tel"));
 		return "insertPage/InsertPage";
 	}
 

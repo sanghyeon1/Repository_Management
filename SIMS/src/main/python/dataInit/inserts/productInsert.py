@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 
-def productInsert():
+def productInsert(conn):
     df = pd.read_csv('inserts/product.csv')
     item_list = df[['name', 'price', 'productCode']]
 
@@ -18,4 +18,4 @@ def productInsert():
 
     conn.commit()
     print("product insert 성공")
-    conn.close()
+    # conn.close()

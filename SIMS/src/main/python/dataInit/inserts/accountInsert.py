@@ -1,6 +1,6 @@
 import pymysql
 
-def accountInsert():
+def accountInsert(conn):
 	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
 	cur = conn.cursor()
 
@@ -26,4 +26,4 @@ def accountInsert():
 
 	conn.commit()
 	print("account insert 성공")
-	conn.close()
+	# conn.close()
