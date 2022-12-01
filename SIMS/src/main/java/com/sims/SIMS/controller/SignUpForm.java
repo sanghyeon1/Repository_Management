@@ -4,15 +4,15 @@ public class SignUpForm {
 	private String name;
 	private String password;
 	private String phoneNumber;
-	private String id;
+	private String userId;
 	private String passwordCheck;
 
-	public String getId() {
-		return id;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getPasswordCheck() {

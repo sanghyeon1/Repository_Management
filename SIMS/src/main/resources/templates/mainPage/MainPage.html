@@ -8,7 +8,7 @@
 
 <body>
 
-<div th:replace="/notLoginPage/NotLoginHeader :: header" th:remove="tag"></div>
+<div th:replace="notLoginPage/NotLoginHeader :: header"></div>
   <main>
     <div class = "side_contents">
       <div class = "side_up">재고, 직접 계산하기 힘드시죠? <br> SIMS가 대신 계산해드립니다!</div>
@@ -24,7 +24,7 @@
       <div class = "login_name">LOGIN</div>
       <div class = "login_idname">ID</div>
       <form action="/signIn" method="post">
-        <input type="text" name="id" class="account" padding = "10px">
+        <input type="text" name="userId" class="account" padding = "10px">
         <div class = "login_pwname">PW</div>
         <input type="password" name="password" class="account" padding = "10px">
         <button type="submit" id="login_btn" class="btn">로그인</button>

@@ -8,7 +8,7 @@ import com.sims.SIMS.domain.Member;
 public interface MemberRepository {
 	Member save(Member member);
 
-	Optional<Member> findById(String id);
+	Optional<Member> findById(String userId);
 	Optional<Member> findByName(String name);
 
 	Boolean isRightPassword(String id, String password);

@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<div th:replace="/notLoginPage/NotLoginHeader :: header" th:remove="tag"></div>
+<div th:replace="notLoginPage/NotLoginHeader :: header" th:remove="tag"></div>
 
     <main>
         <div class = "main-background">
@@ -23,7 +23,7 @@
 
                         <div align="center">
                             <div class="ID-title">ID</div>
-                            <input id="ID" name="id" type="text">
+                            <input id="ID" name="userId" type="text">
 
                             <div class="PW-title">PW</div>
                             <input id="Password" name="password" type="text">
