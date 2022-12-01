@@ -33,7 +33,7 @@ public class MainController {
 	}
 
 	@PostMapping("/signIn")
-	public String singIn(SignInForm form, HttpServletRequest request) {
+	public String signIn(SignInForm form, HttpServletRequest request) {
 		Optional<Member> member = memberService.findOne(form.getUserId());
 		if (member.isEmpty()) {
 			return "redirect:/signInError";

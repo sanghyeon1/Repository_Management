@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.sims.SIMS.repository.JpaMemberRepository;
+import com.sims.SIMS.repository.LogRepository;
 import com.sims.SIMS.repository.MemberRepository;
-// import com.sims.SIMS.repository.MemoryMemberRepository;
+import com.sims.SIMS.service.LogService;
 import com.sims.SIMS.service.MemberService;
 
 @Configuration
@@ -26,9 +27,6 @@ public class SpringConfig {
 	}
 	@Bean
 	public MemberRepository memberRepository() {
-		// return new MemoryMemberRepository();
-		// return new JdbcMemberRepository(dataSource);
-		// return new JdbcTemplateMemberRepository(dataSource);
 		return new JpaMemberRepository(em);
 	}
 }

@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SIMS</title>
+</head>
+
+<body>
+    <div th:replace="Header :: header" th:remove="tag"></div>
+    <table border="1">
+        <tr th:each="log : ${logs}">
+            <td th:text="${log.productCode}"/>
+            <td th:text="${log.amount}"/>
+            <td th:text="${log.date}"/>
+            <td th:text="${log.type}"/>
+        </tr>
+    </table>
+</body>
+</html>

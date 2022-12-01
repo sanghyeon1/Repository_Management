@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class InsertController {
@@ -16,5 +17,15 @@ public class InsertController {
 			return "/mainPage/MainPage";
 		}
 		return "insertPage/InsertPage";
+	}
+
+	@PostMapping("/insert/income")
+	public String accountIncomePage(HttpServletRequest request, IncomeForm form) {
+		HttpSession session = request.getSession(false);
+		if (session == null) {
+			return "/mainPage/MainPage";
+		}
+
+		return "redirect:/insertPage/InsertPage";
 	}
 }
