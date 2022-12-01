@@ -31,11 +31,11 @@
 .prdgrp_box {
   width: 620px;
   height: 500px;
-  background-color: white;
   border-radius: 2em;
   border-style: solid;
   border-width: 13px;
   border-color: #FFFFDD;
+  background-color: white;
   padding: 30px;
   text-align: center;
   margin-top: 15px;
@@ -49,6 +49,7 @@
 
 #product {
   font-family: '나눔스퀘어';
+  font-size: 15pt;
   width: 200px;
   height: 50px;
   background-color:#FFFFDD;
@@ -70,11 +71,11 @@
 .paygrp_box {
   width: 620px;
   height: 500px;
-  background-color: white;
   border-radius: 2em;
   border-style: solid;
   border-width: 13px;
   border-color: #FFFFDD;
+  background-color: white;
   padding: 30px;
   text-align: center;
   margin-top: 15px;

@@ -56,7 +56,7 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 0px;
+  margin-left: 90px;
 }
 
 .gain-insert a {
@@ -74,28 +74,10 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 45px;
+  margin-left: 75px;
 }
 
 .gain-modify a {
-  text-decoration: none;
-  color: #349E85;
-}
-
-.gain-delete {
-  width: 160px;
-  height: 60px;
-  background-color: #FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  color: #349E85;
-  font-size: 18pt;
-  position: relative;
-  margin-top: 15px;
-  margin-left: 45px;
-}
-
-.gain-delete a {
   text-decoration: none;
   color: #349E85;
 }
@@ -148,7 +130,7 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 0px;
+  margin-left: 90px;
 }
 
 .pay-insert a {
@@ -166,28 +148,10 @@
   font-size: 18pt;
   position:relative;
   margin-top: 15px;
-  margin-left: 45px;
+  margin-left: 75px;
 }
 
 .pay-modify a {
-  text-decoration: none;
-  color: #349E85;
-}
-
-.pay-delete {
-  width: 160px;
-  height: 60px;
-  background-color: #FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  color: #349E85;
-  font-size: 18pt;
-  position: relative;
-  margin-top: 15px;
-  margin-left: 45px;
-}
-
-.pay-delete a {
   text-decoration: none;
   color: #349E85;
 }

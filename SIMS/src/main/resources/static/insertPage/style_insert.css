@@ -60,9 +60,10 @@
 
 #product {
   font-family: '나눔스퀘어';
+  font-size: 15pt;
   width: 400px;
   height: 50px;
-  background-color:#FFFFDD;
+  background-color: #FFFFDD;
   border-radius: 30px;
   border-style: none;
   text-align: center;
@@ -127,7 +128,14 @@ button#post_btn a {
   color: #349E85;
 }
 
-button#clear_btn {
-  margin-left: 10px;
+input#clear_btn {
+  font-family: '나눔스퀘어';
+  font-size: 13pt;
   width: 150px;
+  height: 50px;
+  margin-left: 10px;
+  background-color: #FFFFDD;
+  border-radius: 30px;
+  border-style: none;
+  color: #349E85;
 }
