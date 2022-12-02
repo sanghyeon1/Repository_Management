@@ -91,7 +91,7 @@ def account(conn, tel):
     result = int(result)
 
     print("Predicted Day income :", result)
-
+    
     cur.execute("SELECT * FROM accountPredict WHERE tel='" + tel + "';")
     row = cur.fetchone()
     if (row == None):
