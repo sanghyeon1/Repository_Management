@@ -15,5 +15,45 @@
             <td th:text="${log.type}"/>
         </tr>
     </table>
+    <table border="1">
+        <tr th:each="product : ${products}">
+            <td th:text="${product.name}"/>
+            <td th:text="${product.price}"/>
+            <td th:text="${product.productCode}"/>
+            <td th:text="${product.primeCost}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="productSalesPredict : ${productSalesPredicts}">
+            <td th:text="${productSalesPredict.id}"/>
+            <td th:text="${productSalesPredict.predict}"/>
+            <td th:text="${productSalesPredict.tel}"/>
+            <td th:text="${productSalesPredict.name}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="accountPredict : ${accountPredicts}">
+            <td th:text="${accountPredict.predict}"/>
+            <td th:text="${accountPredict.tel}"/>
+            <td th:text="${accountPredict.id}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="account : ${accounts}">
+            <td th:text="${account.id}"/>
+            <td th:text="${account.income}"/>
+            <td th:text="${account.tel}"/>
+            <td th:text="${account.date}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="productSale : ${productSales}">
+            <td th:text="${productSale.id}"/>
+            <td th:text="${productSale.sales}"/>
+            <td th:text="${productSale.name}"/>
+            <td th:text="${productSale.tel}"/>
+            <td th:text="${productSale.date}"/>
+        </tr>
+    </table>
 </body>
 </html>
