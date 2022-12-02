@@ -16,19 +16,6 @@ public class ProductService {
 		this.productRepository = productRepository;
 	}
 
-	public Long join(Product product) {
-		validateDuplicateMember(product);
-		productRepository.save(product);
-		return product.getId();
-	}
-
-	private void validateDuplicateMember(Product product) {
-		Optional<Product> result = productRepository.findByName(product.getName());
-		result.ifPresent(m-> {
-			throw new IllegalStateException("이미 존재하는 회원입니다.");
-		});
-	}
-
 	public List<Product> findProducts() {
 		return productRepository.findAll();
 	}

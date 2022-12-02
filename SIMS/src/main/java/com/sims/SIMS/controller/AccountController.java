@@ -42,11 +42,4 @@ public class AccountController {
 		socketAccess("account," + session.getAttribute("tel"));
 		return "accountPage/AccountPage";
 	}
-
-	@GetMapping("/test")
-	public String testPage(Model model) {
-		List<Log> logs = logService.findLogsOnlyThirty();
-		model.addAttribute("logs", logs);
-		return "testPage";
-	}
 }
