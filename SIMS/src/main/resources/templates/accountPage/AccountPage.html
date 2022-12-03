@@ -15,6 +15,15 @@
       	<div class="gain-head">수입</div>
       	<div class="left-box">
           	<div class="gain-list">수입 내역</div>
+            <!-- 최근 30일간 판매 기록 뽑아오기 -->
+            <table border="1">
+              <tr th:each="sellLog : ${sellLogs}">
+                <td th:text="${sellLog.productCode}"/>
+                <td th:text="${sellLog.amount}"/>
+                <td th:text="${sellLog.date}"/>
+              </tr>
+            </table>
+
         </div>
         <button class="gain-insert"><a href="insert">입력</a></button>
         <button class="gain-modify"><a href="insert">수정</a></button>
@@ -23,6 +32,15 @@
       	<div class="pay-head">지출</div>
         <div class="right-box">
           <div class="pay-list">지출 내역</div>
+            <!-- 최근 30일간 구매 기록 뽑아오기 -->
+            <table border="1">
+              <tr th:each="buyLog : ${buyLogs}">
+                <td th:text="${buyLog.productCode}"/>
+                <td th:text="${buyLog.amount}"/>
+                <td th:text="${buyLog.date}"/>
+              </tr>
+            </table>
+
         </div>
         <button class="pay-insert"><a href="insert">입력</a></button>
         <button class="pay-modify"><a href="insert">수정</a></button>

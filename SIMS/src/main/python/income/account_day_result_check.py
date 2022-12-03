@@ -29,8 +29,7 @@ def account(conn, tel):
     price = list()
 
     cur = conn.cursor()
-    cur.execute("SELECT income FROM account WHERE tel='" + tel + "' ORDER BY id")
-    print("SELECT income FROM account WHERE tel='" + tel + "' ORDER BY id")
+    cur.execute("SELECT income FROM account WHERE tel='" + tel + "' ORDER BY date")
     rows = cur.fetchall()
     for row in rows:
         price.append(row[0])
@@ -94,6 +93,7 @@ def account(conn, tel):
     
     cur.execute("SELECT * FROM accountPredict WHERE tel='" + tel + "';")
     row = cur.fetchone()
+    print("INSERT INTO accountPredict VALUES(NULL, '" + str(result) + "', '" + tel + "');")
     if (row == None):
         cur.execute("INSERT INTO accountPredict VALUES(NULL, '" + str(result) + "', '" + tel + "');")
     else:

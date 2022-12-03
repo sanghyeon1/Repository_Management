@@ -1,5 +1,6 @@
 package com.sims.SIMS.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,12 +19,21 @@ public class AccountService {
 		this.accountRepository = accountRepository;
 	}
 
-	public List<Account> findAccount() {
-		return accountRepository.findAll();
+	public List<Account> findAccount(String tel) {
+		return accountRepository.findAll(tel);
 	}
 
-	public List<Account> findRecent10Account() {
-		return accountRepository.findRecent10();
+	public List<Account> findRecent10Account(String tel) {
+		List<Account> accounts = accountRepository.findAll(tel);
+		List<Account> result = new ArrayList<>();
+		int i = 0;
+		for (Account account : accounts) {
+			if (i < 10) {
+				result.add(account);
+			}
+			i++;
+		}
+		return result;
 	}
 
 	public Optional<Account> findOne(Long accountId) {

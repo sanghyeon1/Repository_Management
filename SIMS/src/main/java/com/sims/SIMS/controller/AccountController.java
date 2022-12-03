@@ -36,10 +36,14 @@ public class AccountController {
 		if (session == null) {
 			return "/mainPage/MainPage";
 		}
-		// 쿼리문으로 가계부 데이터를 받아오기
-		List<Log> logs = logService.findLogsOnlyThirty();
-		model.addAttribute("logs", logs);
-		socketAccess("account," + session.getAttribute("tel"));
+		String tel = String.valueOf(session.getAttribute("tel"));
+
+		List<Log> sellLogs = logService.findSellLogsOnlyThirty(tel);
+		model.addAttribute("sellLogs", sellLogs);
+
+		List<Log> buyLogs = logService.findBuyLogsOnlyThirty(tel);
+		model.addAttribute("buyLogs", buyLogs);
+
 		return "accountPage/AccountPage";
 	}
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.sims.SIMS.domain.Log;
 import com.sims.SIMS.domain.ProductSales;
+import com.sims.SIMS.domain.ProductSalesPredict;
 
 @Repository
 public class ProductSalesRepository {
@@ -29,12 +30,25 @@ public class ProductSalesRepository {
 			.getResultList();
 	}
 
-	public List<ProductSales> findRecent10() {
-		List<ProductSales> productSales = em.createQuery("select m from ProductSales m order by m.date desc", ProductSales.class)
+	public Optional<ProductSales> findByName(String name) {
+		List<ProductSales> result = em.createQuery("select m from ProductSales m where m.name = :name", ProductSales.class)
+			.setParameter("name", name)
+			.getResultList();
+		return result.stream().findAny();
+	}
+
+	public List<ProductSales> findRecent10(String productCode, String tel) {
+		List<ProductSales> productSales = em.createQuery("select m from ProductSales m where m.name = :productCode and m.tel = :tel order by m.date desc", ProductSales.class)
+			.setParameter("productCode", productCode)
+			.setParameter("tel", tel)
 			.getResultList();
 		List<ProductSales> result = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
-			result.add(productSales.get(i));
+		int i = 0;
+		for (ProductSales productSale : productSales) {
+			if (i < 10) {
+				result.add(productSale);
+			}
+			i++;
 		}
 		return result;
 	}

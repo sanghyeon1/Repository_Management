@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 
 import org.springframework.stereotype.Repository;
 
+import com.sims.SIMS.domain.ProductSales;
 import com.sims.SIMS.domain.ProductSalesPredict;
 
 @Repository
@@ -27,9 +28,10 @@ public class ProductSalesPredictRepository {
 		return Optional.ofNullable(productSalesPredict);
 	}
 
-	public Optional<ProductSalesPredict> findByName(String name) {
-		List<ProductSalesPredict> result = em.createQuery("select m from ProductSalesPredict m where m.name = :name", ProductSalesPredict.class)
+	public Optional<ProductSalesPredict> findByName(String name, String tel) {
+		List<ProductSalesPredict> result = em.createQuery("select m from ProductSalesPredict m where m.name = :name and m.tel = :tel", ProductSalesPredict.class)
 			.setParameter("name", name)
+			.setParameter("tel", tel)
 			.getResultList();
 		return result.stream().findAny();
 	}

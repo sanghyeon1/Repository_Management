@@ -19,8 +19,8 @@ public class AccountPredictService {
 		this.accountPredictRepository = accountPredictRepository;
 	}
 
-	public List<AccountPredict> findAccountPredict() {
-		return accountPredictRepository.findAll();
+	public Optional<AccountPredict> findAccountPredict(String tel) {
+		return accountPredictRepository.findByTel(tel);
 	}
 
 	public Optional<AccountPredict> findOne(Long accountPredictId) {

@@ -1,6 +1,10 @@
 package com.sims.SIMS.controller;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,19 +44,35 @@ public class TestController {
 	}
 
 	@GetMapping("/test")
-	public String testPage(Model model) {
-		List<Log> logs = logService.findLogsOnlyThirty();
-		List<Product> products = productService.findProducts();
-		List<ProductSalesPredict> productSalesPredicts = productSalesPredictService.findProductPredict();
-		List<AccountPredict> accountPredicts = accountPredictService.findAccountPredict();
-		List<Account> accounts = accountService.findRecent10Account();
-		List<ProductSales> productSales = productSalesService.findRecent10ProductSales();
+	public String testPage(Model model, HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+		if (session == null) {
+			return "/mainPage/MainPage";
+		}
+		String tel = String.valueOf(session.getAttribute("tel"));
+
+		List<Log> logs = logService.findSellLogsOnlyThirty(tel);
 		model.addAttribute("logs", logs);
+
+		List<Product> products = productService.findProducts();
 		model.addAttribute("products", products);
-		model.addAttribute("productPredicts", productSalesPredicts);
-		model.addAttribute("accountPredicts", accountPredicts);
+
+		Optional<ProductSalesPredict> productSalesPredict = productSalesPredictService.findProductPredictByCode("PEA6_16800_3", tel);
+		if (productSalesPredict.isPresent()) {
+			model.addAttribute("productSalesPredict", productSalesPredict.get());
+		}
+
+		Optional<AccountPredict> accountPredict = accountPredictService.findAccountPredict(tel);
+		if (accountPredict.isPresent()) {
+			model.addAttribute("accountPredict", accountPredict.get());
+		}
+
+		List<Account> accounts = accountService.findRecent10Account(tel);
 		model.addAttribute("accounts", accounts);
+
+		List<ProductSales> productSales = productSalesService.findRecent10ProductSales("PEA6_16800_3", tel);
 		model.addAttribute("productSales", productSales);
+
 		return "testPage";
 	}
 }

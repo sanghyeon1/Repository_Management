@@ -34,6 +34,13 @@ public class ProductRepository {
 		return result.stream().findAny();
 	}
 
+	public Optional<Product> findByProductCode(String productCode) {
+		List<Product> result = em.createQuery("select m from Product m where m.productCode = :productCode", Product.class)
+			.setParameter("productCode", productCode)
+			.getResultList();
+		return result.stream().findAny();
+	}
+
 	public List<Product> findAll() {
 		return em.createQuery("select m from Product m", Product.class)
 			.getResultList();

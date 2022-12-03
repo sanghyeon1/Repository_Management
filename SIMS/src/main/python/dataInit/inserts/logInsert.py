@@ -20,8 +20,7 @@ def logInsert(conn):
 				+ str(item_list.iloc[i]['productCode']) + '", "' 
 				+ str(item_list.iloc[i]['amount']) + '", "' 
 				+ str(item_list.iloc[i]['date']) + '", "'
-				+ type + '", "'
-				+ str(item_list.iloc[i]['stockAmount']) + '" );')
+				+ type + '" );')
 
 	conn.commit()
 	print("log insert 성공")

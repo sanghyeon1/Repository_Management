@@ -28,9 +28,9 @@ public class AccountPredictRepository {
 		return Optional.ofNullable(accountPredict);
 	}
 
-	public Optional<AccountPredict> findByName(String name) {
-		List<AccountPredict> result = em.createQuery("select m from AccountPredict m where m.name = :name", AccountPredict.class)
-			.setParameter("name", name)
+	public Optional<AccountPredict> findByTel(String tel) {
+		List<AccountPredict> result = em.createQuery("select m from AccountPredict m where m.tel = :tel", AccountPredict.class)
+			.setParameter("tel", tel)
 			.getResultList();
 		return result.stream().findAny();
 	}

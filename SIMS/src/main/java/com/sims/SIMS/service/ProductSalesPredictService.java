@@ -20,7 +20,13 @@ public class ProductSalesPredictService {
 		return productSalesPredictRepository.findAll();
 	}
 
+	public Optional<ProductSalesPredict> findProductPredictByCode(String productCode, String tel) {
+		return productSalesPredictRepository.findByName(productCode, tel);
+	}
+
 	public Optional<ProductSalesPredict> findOne(Long productPredictId) {
 		return productSalesPredictRepository.findById(productPredictId);
 	}
+
+
 }

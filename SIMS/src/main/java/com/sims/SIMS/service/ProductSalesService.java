@@ -22,8 +22,8 @@ public class ProductSalesService {
 		return productSalesRepository.findAll();
 	}
 
-	public List<ProductSales> findRecent10ProductSales() {
-		return productSalesRepository.findRecent10();
+	public List<ProductSales> findRecent10ProductSales(String productCode, String tel) {
+		return productSalesRepository.findRecent10(productCode, tel);
 	}
 
 	public Optional<ProductSales> findOne(Long productSalesId) {

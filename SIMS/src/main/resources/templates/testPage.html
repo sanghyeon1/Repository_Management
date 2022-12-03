@@ -24,18 +24,18 @@
         </tr>
     </table>
     <table border="1">
-        <tr th:each="productSalesPredict : ${productSalesPredicts}">
-            <td th:text="${productSalesPredict.id}"/>
-            <td th:text="${productSalesPredict.predict}"/>
-            <td th:text="${productSalesPredict.tel}"/>
-            <td th:text="${productSalesPredict.name}"/>
+        <tr th:each="p : ${productSalesPredict}">
+            <td th:text="${p.id}"/>
+            <td th:text="${p.predict}"/>
+            <td th:text="${p.tel}"/>
+            <td th:text="${p.name}"/>
         </tr>
     </table>
     <table border="1">
-        <tr th:each="accountPredict : ${accountPredicts}">
-            <td th:text="${accountPredict.predict}"/>
-            <td th:text="${accountPredict.tel}"/>
-            <td th:text="${accountPredict.id}"/>
+        <tr th:each="a : ${accountPredict}">
+            <td th:text="${a.predict}"/>
+            <td th:text="${a.tel}"/>
+            <td th:text="${a.id}"/>
         </tr>
     </table>
     <table border="1">

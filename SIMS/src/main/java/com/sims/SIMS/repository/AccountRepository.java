@@ -24,17 +24,9 @@ public class AccountRepository {
 		return Optional.ofNullable(account);
 	}
 
-	public List<Account> findAll() {
-		return em.createQuery("select m from Account m", Account.class)
+	public List<Account> findAll(String tel) {
+		return em.createQuery("select m from Account m where m.tel = :tel order by m.date desc", Account.class)
+			.setParameter("tel", tel)
 			.getResultList();
-	}
-
-	public List<Account> findRecent10() {
-		List<Account> accounts = em.createQuery("select m from Account m order by m.date desc", Account.class).getResultList();
-		List<Account> result = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
-			result.add(accounts.get(i));
-		}
-		return result;
 	}
 }
