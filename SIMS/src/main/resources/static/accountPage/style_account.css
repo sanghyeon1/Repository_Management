@@ -56,28 +56,10 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 90px;
+  margin-left: 210px;
 }
 
 .gain-insert a {
-  text-decoration: none;
-  color: #349E85;
-}
-
-.gain-modify {
-  width:160px;
-  height: 60px;
-  background-color:#FFFFDD;
-  border-radius: 0.5em ;
-  border: none;
-  color: #349E85;
-  font-size: 18pt;
-  position: relative;
-  margin-top: 15px;
-  margin-left: 75px;
-}
-
-.gain-modify a {
   text-decoration: none;
   color: #349E85;
 }
@@ -130,28 +112,10 @@
   font-size: 18pt;
   position: relative;
   margin-top: 15px;
-  margin-left: 90px;
+  margin-left: 210px;
 }
 
 .pay-insert a {
-  text-decoration: none;
-  color: #349E85;
-}
-
-.pay-modify {
-  width:160px;
-  height: 60px;
-  background-color:#FFFFDD;
-  border-radius: 0.5em;
-  border: none;
-  color:#349E85;
-  font-size: 18pt;
-  position:relative;
-  margin-top: 15px;
-  margin-left: 75px;
-}
-
-.pay-modify a {
   text-decoration: none;
   color: #349E85;
 }

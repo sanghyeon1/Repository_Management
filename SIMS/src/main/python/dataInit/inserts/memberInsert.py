@@ -5,7 +5,7 @@ def memberInsert():
     df = pd.read_csv('inserts/member.csv')
     item_list = df[['user_id', 'name', 'password', 'tel']]
 
-    conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', password='1234', charset='utf8')
     cur = conn.cursor()
     row_count, column_count = df.shape
 

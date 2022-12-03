@@ -1,6 +1,6 @@
 import pymysql
 
-conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', password='1234', charset='utf8')
 
 cur = conn.cursor()
 createAccount = "CREATE TABLE `account` (`id` int NOT NULL AUTO_INCREMENT,`income` int NOT NULL,`tel` varchar(45) DEFAULT NULL,`date` date DEFAULT NULL,PRIMARY KEY (`id`))"

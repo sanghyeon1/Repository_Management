@@ -5,7 +5,7 @@ def logInsert():
 	df = pd.read_csv('../account_log_all.csv')
 	item_list = df[['tel', 'productCode', 'amount', 'date', 'primeCost', 'cost', 'stockAmount']]
 
-	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', password='1234', charset='utf8')
 	cur = conn.cursor()
 	row_count, column_count = df.shape
 

@@ -1,7 +1,7 @@
 import pymysql
 
 def accountInsert():
-	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+	conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', password='1234', charset='utf8')
 	cur = conn.cursor()
 
 	cur.execute("SELECT date, sum(amount*p.primeCost) FROM log as l, product as p WHERE type='buy' and l.productCode=p.productCode group by date order by date;")

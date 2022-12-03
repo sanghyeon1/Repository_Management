@@ -5,7 +5,7 @@ def productInsert():
     df = pd.read_csv('inserts/product.csv')
     item_list = df[['name', 'price', 'productCode']]
 
-    conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
+    conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', password='1234', charset='utf8')
     cur = conn.cursor()
     row_count, column_count = df.shape
 

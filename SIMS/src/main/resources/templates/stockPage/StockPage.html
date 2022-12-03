@@ -4,30 +4,63 @@
   <title>SIMS</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="stockPage/style_stock.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 </head>
 
 <body>
 <div th:replace="Header :: header" th:remove="tag"></div>
   <main>
+  <script type="text/javascript">
+  				
+  
+  				
+ 	</script>
     <div class="side_content">재고관리</div>
     <div class="left">
     	<div class="left_name">수익 예측(단위 : 하루)</div>
     	<div class="prdgrp_box">
-    		<canvas id="mychart_1" width="500" height="430"></canvas>
-    		<script>
-    			let mychart_1 = document.getElementById('mychart_1').getContext('2d');
-  				let myChart_1 = new Chart(mychart_1, {
-	    			type: 'bar',
-	   				data: {
-	      				labels: ['5일 전', '4일 전', '3일 전', '2일 전', '1일 전', '오늘'],
-	      			datasets: [{
-	          			label: "수익 예측량",
-	          			data: [10, 20, 30, 40, 50, 60],
-	          			backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
-	        			}]
-	    			},
-	   			 options: {}
+    		<canvas id="income_grp" width="500" height="400"></canvas>
+    		  <script type="text/javascript">
+    		  	var mychart_1 = document.getElementById('income_grp').getContext('2d');
+				var myChart_1 = new Chart(mychart_1, {
+					type: 'bar',
+						data: {
+						labels: ['5일 전', '4일 전', '3일 전', '2일 전', '1일 전', '오늘'],
+					datasets: [{
+						label: "수익 예측량",
+						data: [40, 20, 70, 30, 50, 60],
+						backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
+						}]
+					},
+		 			options: {
+		 				title: {
+							  display: true,
+							  text: '수익 예측량(단위 : 하루)',
+							  fontFamily: '나눔스퀘어',
+							  fontSize: 20,
+							  fontColor: '#349E85'
+						  },
+						legend: {
+							labels: {
+								fontColor: '#349E85',
+								fontFamily: '나눔스퀘어'
+							}
+						},
+						scales: {
+							xAxes: [{
+								ticks: {
+									fontColor: '#349E85',
+									fontFamily: '나눔스퀘어'
+								}
+							}],
+							yAxes: [{
+								ticks: {
+									fontColor: '#349E85',
+									fontFamily: '나눔스퀘어'
+								}
+							}]
+						}
+		 			}
 				});
  			</script>
     	</div>
@@ -35,32 +68,60 @@
     <div class="right">
     	<select id="product">
     		<option value="">물품 선택</option>
-        	<option value="1번 물품">1번</option>
-        	<option value="2번 물품">2번</option>
-        	<option value="3번 물품">3번</option>
-        	<option value="4번 물품">4번</option>
-        	<option value="5번 물품">5번</option>
-        	<option value="6번 물품">6번</option>
-        	<option value="7번 물품">7번</option>
+        <option value="1번 물품">1번</option>
+        <option value="2번 물품">2번</option>
+        <option value="3번 물품">3번</option>
+        <option value="4번 물품">4번</option>
+        <option value="5번 물품">5번</option>
+        <option value="6번 물품">6번</option>
+        <option value="7번 물품">7번</option>
     	</select>
     	<div class="prd_left">남은 재고량 : </div>
     	<div class="paygrp_box">
-			<canvas id="mychart_2" width="500" height="430"></canvas>
-			<script>
-    			let mychart_2 = document.getElementById('mychart_2').getContext('2d');
-  				let myChart_2 = new Chart(mychart_1, {
-	    			type: 'bar',
-	   				data: {
-	      				labels: ['4일 전', '3일 전', '2일 전', '1일 전', '오늘', '내일'],
-	      			datasets: [{
-	          			label: "판매 예측량",
-	          			data: [10, 20, 30, 40, 50, 60],
-	          			backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
-	        			}]
-	    			},
-	   			 options: {}
-				});
- 			</script>
+			<canvas id="pay_grp" width="500" height="400"></canvas>
+			<script type="text/javascript">
+			  var mychart_2 = document.getElementById('pay_grp').getContext('2d');
+			  var myChart_2 = new Chart(mychart_2, {
+				  type: 'bar',
+				  data: {
+					  labels: ['4일 전', '3일 전', '2일 전', '1일 전', '오늘', '내일'],
+				  datasets: [{
+					  label: "판매 예측량",
+					  data: [10, 20, 30, 40, 50, 60],
+					  backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
+					  }]
+				  },
+			  options: {
+				  title: {
+					  display: true,
+					  text: '판매 예측량(단위 : 하루)',
+					  fontFamily: '나눔스퀘어',
+					  fontSize: 20,
+					  fontColor: '#349E85'
+				  },
+				  legend: {
+						labels: {
+							fontColor: '#349E85',
+							fontFamily: '나눔스퀘어'
+						}
+					},
+					scales: {
+						xAxes: [{
+							ticks: {
+								fontColor: '#349E85',
+								fontFamily: '나눔스퀘어'
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								fontColor: '#349E85',
+								fontFamily: '나눔스퀘어'
+							}
+						}]
+					}
+			  }
+			  });
+			</script>
     	</div>
     	<div class="prd_tomorrow">내일 판매 예측량 : </div>
     </div>
