@@ -18,13 +18,11 @@ public class Log {
 	@Column(name="productCode")
 	private String productCode;
 	@Column(name="amount")
-	private int amount;
+	private Long amount;
 	@Column(name="date")
-	private Date date;
+	private String date;
 	@Column(name="type")
 	private String type;
-	@Column(name="stockAmount")
-	private Long stockAmount;
 
 	public Long getId() {
 		return id;
@@ -50,19 +48,19 @@ public class Log {
 		this.productCode = productCode;
 	}
 
-	public int getAmount() {
+	public Long getAmount() {
 		return amount;
 	}
 
-	public void setAmount(int amount) {
+	public void setAmount(Long amount) {
 		this.amount = amount;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -72,13 +70,5 @@ public class Log {
 
 	public void setType(String type) {
 		this.type = type;
-	}
-
-	public Long getStockAmount() {
-		return stockAmount;
-	}
-
-	public void setStockAmount(Long stockAmount) {
-		this.stockAmount = stockAmount;
 	}
 }

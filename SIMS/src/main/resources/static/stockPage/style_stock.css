@@ -50,7 +50,7 @@
 #product {
   font-family: '나눔스퀘어';
   font-size: 15pt;
-  width: 200px;
+  width: 240px;
   height: 50px;
   background-color:#FFFFDD;
   border-radius: 30px;
@@ -63,9 +63,14 @@
   font-family: '나눔스퀘어';
   font-size: 20pt;
   color: #FFFFDD;
-  margin-top: -42px;
-  margin-left: 230px;
+  margin-top: -56px;
+  margin-left: 265px;
   margin-bottom: 30px;
+}
+
+.prd_left_data {
+  margin-top: -30px;
+  margin-left: 150px;
 }
 
 .paygrp_box {
@@ -78,13 +83,5 @@
   background-color: white;
   padding: 30px;
   text-align: center;
-  margin-top: 15px;
-}
-
-.prd_tomorrow {
-  font-family: '나눔스퀘어';
-  font-size: 20pt;
-  color: #FFFFDD;
-  margin-top: 20px;
-  margin-left: 25px;
+  margin-top: 5px;
 }

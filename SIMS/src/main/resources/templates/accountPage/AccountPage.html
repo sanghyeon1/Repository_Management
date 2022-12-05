@@ -11,19 +11,47 @@
   <main>
     <div class = "side_content">가계부</div>
     <div>
-      <div class="left">
-      	<div class="gain-head">수입</div>
-      	<div class="left-box">
-          	<div class="gain-list">수입 내역</div>
+      <div class="up">
+      	<div class="up-box">
+          	<div class="gain-list"> 수입 내역
+              <div class="gain-table">
+                <!-- 최근 30일간 판매 기록 뽑아오기 -->
+                <table>
+                  <tr>
+                    <th>물품 코드</th>
+                    <th>수입량</th>
+                    <th>수입 일자</th>
+                  </tr>
+                  <tr th:each="sellLog : ${sellLogs}">
+                    <td th:text="${sellLog.productCode}"/>
+                    <td th:text="${sellLog.amount}"/>
+                    <td th:text="${sellLog.date}"/>
+                  </tr>
+                </table>
+              </div>
+            </div>
         </div>
-        <button class="gain-insert"><a href="insert">입력</a></button>
       </div>
-      <div class="right">
-      	<div class="pay-head">지출</div>
-        <div class="right-box">
-          <div class="pay-list">지출 내역</div>
+      <div class="down">
+        <div class="down-box">
+          <div class="pay-list"> 지출 내역
+            <div class="pay-table">
+              <!-- 최근 30일간 구매 기록 뽑아오기 -->
+              <table>
+                <tr>
+                  <th>물품 코드</th>
+                  <th>지출량</th>
+                  <th>지출 일자</th>
+                </tr>
+                <tr th:each="buyLog : ${buyLogs}">
+                  <td th:text="${buyLog.productCode}"/>
+                  <td th:text="${buyLog.amount}"/>
+                  <td th:text="${buyLog.date}"/>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
-        <button class="pay-insert"><a href="insert">입력</a></button>
       </div>
     </div>
   </main>

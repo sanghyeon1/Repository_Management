@@ -12,6 +12,7 @@ import com.sims.SIMS.domain.Log;
 import com.sims.SIMS.repository.LogRepository;
 
 @Service
+@Transactional
 public class LogService {
 	private final LogRepository logRepository;
 
@@ -24,15 +25,32 @@ public class LogService {
 		return log.getId();
 	}
 
-	public List<Log> findLogs() {
-		return logRepository.findAll();
+	public List<Log> findLogs(String tel) {
+		return logRepository.findAll(tel);
 	}
 
-	public List<Log> findLogsOnlyThirty() {
+	public List<Log> findBuyLogsOnlyThirty(String tel) {
+		List<Log> allLogs = logRepository.findBuyLogs(tel);
 		List<Log> thirtyLogs = new ArrayList<>();
-		List<Log> allLogs = logRepository.findAll();
-		for (int i = 0; i < 30; i++) {
-			thirtyLogs.add(allLogs.get(i));
+		int i = 0;
+		for (Log log : allLogs) {
+			if (i < 30) {
+				thirtyLogs.add(log);
+			}
+			i++;
+		}
+		return thirtyLogs;
+	}
+
+	public List<Log> findSellLogsOnlyThirty(String tel) {
+		List<Log> allLogs = logRepository.findSellLogs(tel);
+		List<Log> thirtyLogs = new ArrayList<>();
+		int i = 0;
+		for (Log log : allLogs) {
+			if (i < 30) {
+				thirtyLogs.add(log);
+			}
+			i++;
 		}
 		return thirtyLogs;
 	}

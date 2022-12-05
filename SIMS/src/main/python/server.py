@@ -1,6 +1,10 @@
 import socket, threading;
-from income import account_day_result_check;
-from product_id import product_result_check;
+import pymysql
+from income import account_day_result_check
+from product_id import product_result_check
+from dataUpdate import productUpdate
+from dataUpdate import accountUpdate
+from dataUpdate import productStockUpdate
 
 def binder(client_socket, addr):	
   print('Connected by', addr);	
@@ -9,23 +13,30 @@ def binder(client_socket, addr):
       data = client_socket.recv(4);	
       length = int.from_bytes(data, "little");	
       data = client_socket.recv(length);	
-      msg = data.decode();	
+      msg = data.decode();
+      if ',' in msg:
+        strings = msg.split(',')
+      msg = strings[0]
+      tel = strings[1]
       print('Received from', addr, msg);
-      
+      conn = pymysql.connect(host='127.0.0.1', user='root', db='SIMS', charset='utf8')
       if msg == 'account':
-        account_day_result_check.account();
-        print('income 데이터 분석 성공');
+        account_day_result_check.account(conn, tel)
+        print('income 데이터 분석 성공')
       elif msg == 'product':
-        product_result_check.product();
-        print('product 데이터 분석 성공');	
-      elif msg == 'updateSales':
-        print('sales update 추가할것')
+        product_result_check.product(conn, tel)
+        print('product 데이터 분석 성공')
+      elif msg == 'updateProductSales':
+        productUpdate.productSalesUpdate(conn, tel)
+      elif msg == 'updateAccount':
+        accountUpdate.accountUpdate(conn, tel)
+        productStockUpdate.productStockUpdate(conn, tel)
         
       msg = "echo : " + msg;	
       data = msg.encode();	
       length = len(data);	
       client_socket.sendall(length.to_bytes(4, byteorder='little'));	
-      client_socket.sendall(data);	
+      client_socket.sendall(data);
   except:	
     print("except : " , addr);	
   finally:	

@@ -29,8 +29,23 @@ public class LogRepository{
 		return Optional.ofNullable(log);
 	}
 
-	public List<Log> findAll() {
-		return em.createQuery("select m from Log m", Log.class)
+	public List<Log> findAll(String tel) {
+		return em.createQuery("select m from Log m where m.tel = :tel", Log.class)
+			.setParameter("tel", tel)
+			.getResultList();
+	}
+
+	public List<Log> findBuyLogs(String tel) {
+		return em.createQuery("select m from Log m where m.tel = :tel and m.type= :type order by date desc", Log.class)
+			.setParameter("tel", tel)
+			.setParameter("type", "buy")
+			.getResultList();
+	}
+
+	public List<Log> findSellLogs(String tel) {
+		return em.createQuery("select m from Log m where m.tel = :tel and m.type= :type order by date desc", Log.class)
+			.setParameter("tel", tel)
+			.setParameter("type", "sell")
 			.getResultList();
 	}
 }

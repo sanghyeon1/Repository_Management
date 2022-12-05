@@ -31,20 +31,19 @@ public class AccountController {
 	}
 
 	@GetMapping("/account")
-	public String accountPage(HttpServletRequest request) throws Exception{
+	public String accountPage(HttpServletRequest request, Model model) throws Exception{
 		HttpSession session = request.getSession(false);
 		if (session == null) {
 			return "/mainPage/MainPage";
 		}
-		// 쿼리문으로 가계부 데이터를 받아오기
-		socketAccess("account");
-		return "accountPage/AccountPage";
-	}
+		String tel = String.valueOf(session.getAttribute("tel"));
 
-	@GetMapping("/test")
-	public String testPage(Model model) {
-		List<Log> logs = logService.findLogsOnlyThirty();
-		model.addAttribute("logs", logs);
-		return "testPage";
+		List<Log> sellLogs = logService.findSellLogsOnlyThirty(tel);
+		model.addAttribute("sellLogs", sellLogs);
+
+		List<Log> buyLogs = logService.findBuyLogsOnlyThirty(tel);
+		model.addAttribute("buyLogs", buyLogs);
+
+		return "accountPage/AccountPage";
 	}
 }

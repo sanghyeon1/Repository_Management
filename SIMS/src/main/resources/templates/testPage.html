@@ -6,12 +6,53 @@
 
 <body>
     <div th:replace="Header :: header" th:remove="tag"></div>
+
     <table border="1">
         <tr th:each="log : ${logs}">
             <td th:text="${log.productCode}"/>
             <td th:text="${log.amount}"/>
             <td th:text="${log.date}"/>
             <td th:text="${log.type}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="product : ${products}">
+            <td th:text="${product.name}"/>
+            <td th:text="${product.price}"/>
+            <td th:text="${product.productCode}"/>
+            <td th:text="${product.primeCost}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="p : ${productSalesPredict}">
+            <td th:text="${p.id}"/>
+            <td th:text="${p.predict}"/>
+            <td th:text="${p.tel}"/>
+            <td th:text="${p.name}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="a : ${accountPredict}">
+            <td th:text="${a.predict}"/>
+            <td th:text="${a.tel}"/>
+            <td th:text="${a.id}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="account : ${accounts}">
+            <td th:text="${account.id}"/>
+            <td th:text="${account.income}"/>
+            <td th:text="${account.tel}"/>
+            <td th:text="${account.date}"/>
+        </tr>
+    </table>
+    <table border="1">
+        <tr th:each="productSale : ${productSales}">
+            <td th:text="${productSale.id}"/>
+            <td th:text="${productSale.sales}"/>
+            <td th:text="${productSale.name}"/>
+            <td th:text="${productSale.tel}"/>
+            <td th:text="${productSale.date}"/>
         </tr>
     </table>
 </body>

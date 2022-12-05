@@ -4,126 +4,153 @@
   <title>SIMS</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="stockPage/style_stock.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 
 <body>
 <div th:replace="Header :: header" th:remove="tag"></div>
   <main>
-  <script type="text/javascript">
-  				
-  
-  				
- 	</script>
     <div class="side_content">재고관리</div>
     <div class="left">
     	<div class="left_name">수익 예측(단위 : 하루)</div>
     	<div class="prdgrp_box">
-    		<canvas id="income_grp" width="500" height="400"></canvas>
-    		  <script type="text/javascript">
-    		  	var mychart_1 = document.getElementById('income_grp').getContext('2d');
-				var myChart_1 = new Chart(mychart_1, {
-					type: 'bar',
-						data: {
-						labels: ['5일 전', '4일 전', '3일 전', '2일 전', '1일 전', '오늘'],
-					datasets: [{
-						label: "수익 예측량",
-						data: [40, 20, 70, 30, 50, 60],
-						backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
-						}]
-					},
-		 			options: {
-		 				title: {
-							  display: true,
-							  text: '수익 예측량(단위 : 하루)',
-							  fontFamily: '나눔스퀘어',
-							  fontSize: 20,
-							  fontColor: '#349E85'
-						  },
-						legend: {
-							labels: {
-								fontColor: '#349E85',
-								fontFamily: '나눔스퀘어'
-							}
-						},
-						scales: {
-							xAxes: [{
-								ticks: {
-									fontColor: '#349E85',
-									fontFamily: '나눔스퀘어'
-								}
-							}],
-							yAxes: [{
-								ticks: {
-									fontColor: '#349E85',
-									fontFamily: '나눔스퀘어'
-								}
-							}]
-						}
-		 			}
-				});
- 			</script>
+			<canvas id="income_grp" width="500" height="400"></canvas>
+			<script th:inline="javascript">
+    		/*<![CDATA[*/
+      			const myIncome = document.getElementById('income_grp');
+
+        		let accounts = new Array();
+        		let account = new Object();
+        		let act_final = new Array();
+        		var i = 0;
+
+        		/*[# th:each="account : ${accounts.toArray()}"]*/
+        		account.income =  /*[[${account.income}]]*/;
+        		console.log(i);
+        		accounts[i] = account.income;
+        		i++;
+        		/*[/]*/
+        		act_final = accounts.reverse();
+        		act_final[5] = /*[[${accountPredict.predict}]]*/;
+
+      			new Chart(myIncome, {
+        			type: 'bar',
+        			data: {
+          				labels: ['4일 전', '3일 전', '2일 전', '1일 전', '오늘', '내일'],
+          				datasets: [{
+            				label: '수익 예측량',
+            				data: act_final,
+            				backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
+          				}]
+        			},
+        			options: {
+        				title: {
+        					display: true,
+        					text: '수익 예측량(단위 : 하루)',
+        					fontFamily: '나눔스퀘어',
+        					fontSize: 20,
+        					fontColor: '#349E85'
+        				},
+        				legend: {
+        					labels: {
+        						fontColor: '#349E85',
+        						fontFamily: '나눔스퀘어'
+        					}
+        				},
+          				scales: {
+          					xAxes: [{
+          						ticks: {
+          							fontColor: '#349E85',
+          							fontFamily: '나눔스퀘어'
+          						}
+          					}],
+            				yAxes: [{
+              					ticks: {
+              						fontColor: '#349E85',
+              						fontFamily: '나눔스퀘어',
+              						beginAtZero: false
+              					}
+            				}]
+          				}
+        			}
+      			});
+      		/*]]>*/
+    		</script>
     	</div>
     </div>
     <div class="right">
-    	<select id="product">
-    		<option value="">물품 선택</option>
-        <option value="1번 물품">1번</option>
-        <option value="2번 물품">2번</option>
-        <option value="3번 물품">3번</option>
-        <option value="4번 물품">4번</option>
-        <option value="5번 물품">5번</option>
-        <option value="6번 물품">6번</option>
-        <option value="7번 물품">7번</option>
-    	</select>
-    	<div class="prd_left">남은 재고량 : </div>
+    	<form action="/stock/select" method="post">
+			<select name="product" id="product" onchange="this.form.submit()">
+					<option th:each="product: ${products}" th:text="${product.name}" th:value="${product.name}" th:selected="${product.name} == ${selectedProductName}"></option>
+			</select>
+		</form>
+
+		<!-- 남은 재고량 뽑아오기 -->
+		<div class="prd_left">남은 재고량 : <div class="prd_left_data" th:each="p: ${productStock}" th:text="${p.amount}"></div></div>
     	<div class="paygrp_box">
 			<canvas id="pay_grp" width="500" height="400"></canvas>
-			<script type="text/javascript">
-			  var mychart_2 = document.getElementById('pay_grp').getContext('2d');
-			  var myChart_2 = new Chart(mychart_2, {
-				  type: 'bar',
-				  data: {
-					  labels: ['4일 전', '3일 전', '2일 전', '1일 전', '오늘', '내일'],
-				  datasets: [{
-					  label: "판매 예측량",
-					  data: [10, 20, 30, 40, 50, 60],
-					  backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
-					  }]
-				  },
-			  options: {
-				  title: {
-					  display: true,
-					  text: '판매 예측량(단위 : 하루)',
-					  fontFamily: '나눔스퀘어',
-					  fontSize: 20,
-					  fontColor: '#349E85'
-				  },
-				  legend: {
-						labels: {
-							fontColor: '#349E85',
-							fontFamily: '나눔스퀘어'
-						}
-					},
-					scales: {
-						xAxes: [{
-							ticks: {
-								fontColor: '#349E85',
-								fontFamily: '나눔스퀘어'
-							}
-						}],
-						yAxes: [{
-							ticks: {
-								fontColor: '#349E85',
-								fontFamily: '나눔스퀘어'
-							}
-						}]
-					}
-			  }
-			  });
-			</script>
+			<script th:inline="javascript">
+    		/*<![CDATA[*/
+      			const myPay = document.getElementById('pay_grp');
+
+        		let productSales = new Array();
+        		let productSale = new Object();
+        		let ps_final = new Array();
+        		var i = 0;
+
+        		/*[# th:each="productSale : ${productSales.toArray()}"]*/
+        		productSale.sales =  /*[[${productSale.sales}]]*/;
+        		console.log(i);
+        		productSales[i] = productSale.sales;
+        		i++;
+        		/*[/]*/
+        		ps_final = productSales.reverse();
+        		ps_final[5] = /*[[${productSalePredict.predict}]]*/;
+
+      			new Chart(myPay, {
+        			type: 'bar',
+        			data: {
+          				labels: ['4일 전', '3일 전', '2일 전', '1일 전', '오늘', '내일'],
+          				datasets: [{
+            				label: '판매 예측량',
+            				data: ps_final,
+            				backgroundColor: ['gray', 'gray', 'gray', 'gray', 'gray', 'tomato']
+          				}]
+        			},
+        			options: {
+        				title: {
+        					display: true,
+        					text: '판매 예측량(단위 : 하루)',
+        					fontFamily: '나눔스퀘어',
+        					fontSize: 20,
+        					fontColor: '#349E85'
+        				},
+        				legend: {
+        					labels: {
+        						fontColor: '#349E85',
+        						fontFamily: '나눔스퀘어'
+        					}
+        				},
+          				scales: {
+          					xAxes: [{
+          						ticks: {
+          							fontColor: '#349E85',
+          							fontFamily: '나눔스퀘어'
+          						}
+          					}],
+            				yAxes: [{
+              					ticks: {
+              						fontColor: '#349E85',
+              						fontFamily: '나눔스퀘어',
+              						beginAtZero: false
+              					}
+            				}]
+          				}
+        			}
+      			});
+      		/*]]>*/
+    		</script>
     	</div>
-    	<div class="prd_tomorrow">내일 판매 예측량 : </div>
     </div>
   </main>
 </body>
